@@ -1,6 +1,6 @@
 export const dockerImages: Record<string, string> = {
-  js: "node:24",
-  python: "python:3.12",
+  js: "node:latest",
+  python: "python",
   java: "openjdk:latest",
 };
 

@@ -19,7 +19,7 @@ class CodeServices {
     const fileName = `${tempDir}/${fileId}.${fileExt[language]}`;
 
     await fs.outputFile(fileName, code);
-    const hostPath = process.cwd().replace(/\\/g, "/");
+   const hostPath = `${process.cwd().replace(/\\/g, "/")}/submissions`;
     const dockerCmd = `docker run --rm -v "${hostPath}:/usr/src/app" -w /usr/src/app ${
       dockerImages[language]
     } bash -c "${commands[language](fileName)}"`;

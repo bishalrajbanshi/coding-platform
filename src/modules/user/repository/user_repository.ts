@@ -1,6 +1,5 @@
 import prisma from "prisma/prisma";
 import { Role } from "@prisma/client";
-import UsetEntity from "../user_entity";
 
 export interface UserCreate {
   name: string;
